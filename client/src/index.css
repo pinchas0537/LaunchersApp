@@ -1,0 +1,91 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.card {
+    display: flex;
+    height: 18vh;
+    width: 40vw;
+    background-color: white;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 15px 0px;
+    box-shadow: rgb(204, 203, 203) 0px 7px 10px 0px;
+    border: 0px;
+    flex-direction: column;
+    justify-self: center;
+    z-index: 1;
+}
+
+.input {
+    margin: 5px 5px;
+    height: 5vh;
+}
+
+.h {
+    direction: rtl;
+}
+
+.input::placeholder {
+    padding:0px 20px;
+}
+
+.error {
+    color: red;
+}
+
+.details {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+}
+.button{
+    background-color: rgb(0, 255, 157);
+    height: 5vh;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.button:hover{
+    box-shadow: rgb(152, 247, 211) 0 7px 10px 0px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+}
+.add{
+    display: flex;
+    height:20vh ;
+    align-items: end;
+    justify-content: center;
+}
+.select{
+    height: 5vh;
+    direction: rtl;
+    width: 98%;
+    align-self: center;
+}
+.delete{
+    color: white;
+    background-color: red;
+    width: 10vw;
+    height: 10vh;
+    font-weight: bold;
+    cursor: pointer;
+}
+.deleted{
+    position: absolute;
+    position: fixed;
+    background-color: antiquewhite;
+    height: 40vh;
+    width:40vw ;
+    top: 35%;
+    left: 35%;
+}
