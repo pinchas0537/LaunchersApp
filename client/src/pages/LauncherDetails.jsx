@@ -34,7 +34,6 @@ export default function LauncherDetails() {
         <p><strong>סוג המשגר:</strong>{launcher.rocketType}</p>
         <p><strong>שם:</strong>{launcher.name}</p>
         <button className="delete" onClick={setDeleted(true)}>מחק</button>
-        {deleted === true? <LauncherDelete id={launcher._id}/>:""}
       </div>
       <div className="error">
         {error}
