@@ -32,14 +32,6 @@ export async function findById(id) {
     }
 }
 
-export async function findByQuery(queryParams,query) {
-    try {
-        const result = await db.collection(collection).find({[queryParams]:query}).toArray()
-        return result
-    } catch (error) {
-        throw error
-    }
-}
 
 export async function deleteOne(id) {
     try {
