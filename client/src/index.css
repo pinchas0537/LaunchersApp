@@ -136,3 +136,17 @@
     display: flex;
     justify-self: center;
 }
+.users {
+ display: flex;
+    height: 30vh;
+    width: 40vw;
+    background-color: white;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 15px 0px;
+    box-shadow: rgb(204, 203, 203) 0px 7px 10px 0px;
+    border: 0px;
+    flex-direction: column;
+    justify-self: center;
+    z-index: 1;
+}
