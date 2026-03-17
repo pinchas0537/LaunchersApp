@@ -1,7 +1,9 @@
 import { useState } from "react"
 import { createLauncher } from "../api/launchersApi"
+import Navbar from "../component/Navbar"
 
 export default function AddLauncher() {
+  const token = localStorage.getItem("token")
   const [name, setName] = useState("")
   const [city, setCity] = useState("")
   const [latitude, setLatitude] = useState("")
@@ -9,7 +11,7 @@ export default function AddLauncher() {
   const [rocketType, setRocketType] = useState("")
   async function addLauncher() {
     try {
-      const result = await createLauncher({ name, rocketType, longitude, latitude, city })
+      const result = await createLauncher({ name, rocketType, longitude, latitude, city },token)
       return result
     } catch (error) {
       console.error(error.message)
@@ -25,6 +27,7 @@ export default function AddLauncher() {
       setName("")
       setRocketType("")
     }}>
+      <Navbar />
       <div className="form">
         <input className="input" value={name} onChange={e => setName(e.target.value)} type="text" placeholder="enter name" required />
         <input className="input" value={city} type="text" onChange={e => setCity(e.target.value)} placeholder="enter city" required />

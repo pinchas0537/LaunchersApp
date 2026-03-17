@@ -34,7 +34,7 @@ export async function deleteUser(id) {
 
 export async function findOne(user = {}) {
     try {
-        const findUser = await db.collection(collection).findOneAndUpdate({ $and: [{ username: user.username }, { password: user.password }] }, { last_login: new Date().toISOString() })
+        const findUser = await db.collection(collection).findOneAndUpdate({ $and: [{ username: user.username }, { password: user.password }] }, { $set: { last_login: new Date().toISOString() } })
         return findUser
     } catch (error) {
         throw error

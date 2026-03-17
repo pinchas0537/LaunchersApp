@@ -24,7 +24,7 @@ export async function loginUser(req, res) {
     try {
         const { username, password } = req.body
         const user = await getUserLogin({ username, password })
-        return res.setHeaders("Authorization", user.token).json({ user: user.findUser })
+        return res.setHeader('Authorization', user.token).json({ user: user.findUser })
     } catch (error) {
         res.status(500).json({ error: error.messsage })
     }
@@ -41,9 +41,9 @@ export async function deleteUser(req, res) {
 }
 
 export async function findUser(req, res) {
+    const {username} = req.user
     try {
-        const { username, password } = req.body
-        const user = await getUser({ username, password })
+        const user = await getUser({ username })
         return res.json({ user })
     } catch (error) {
         res.status(500).json({ error: error.messsage })
