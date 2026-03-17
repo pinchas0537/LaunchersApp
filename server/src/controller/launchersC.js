@@ -3,7 +3,7 @@ import { addLauncher, deleteById, getAll, getById } from "../service/longitudeS.
 export async function createLauncher(req, res) {
     try {
         const { city, rocketType, latitude, longitude, name } = req.body
-        const create = await addLauncher({ city, rocketType, latitude, longitude, name })
+        const create = await addLauncher({ city, rocketType, latitude, longitude, name, Wasitdestroyed: false })
         return res.status(201).json({ launcher: create })
     } catch (error) {
         res.status(500).json({ error: error.message })
