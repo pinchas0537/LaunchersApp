@@ -13,7 +13,6 @@ export default function LoginPage() {
     async function loginUser() {
        try {
          const user = await login({ username, password })
-         console.log(user);
          localStorage.setItem("token", user.headers.authorization)
          localStorage.setItem("user", JSON.stringify(user.data.user))
          setToken(localStorage.getItem("token"))
