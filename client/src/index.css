@@ -6,7 +6,7 @@
 
 .card {
     display: flex;
-    height: 18vh;
+    height: 20vh;
     width: 40vw;
     background-color: white;
     cursor: pointer;
@@ -29,7 +29,7 @@
 }
 
 .input::placeholder {
-    padding:0px 20px;
+    padding: 0px 20px;
 }
 
 .error {
@@ -37,11 +37,12 @@
 }
 
 .details {
-    height: 30vh;
+    min-height: 35vh;
     display: flex;
     align-items: center;
 }
-.button{
+
+.button {
     background-color: rgb(0, 255, 157);
     height: 5vh;
     border: none;
@@ -49,10 +50,12 @@
     font-size: 1rem;
     cursor: pointer;
 }
-.button:hover{
+
+.button:hover {
     box-shadow: rgb(152, 247, 211) 0 7px 10px 0px;
 }
-.form{
+
+.form {
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -60,19 +63,22 @@
     align-content: center;
     justify-self: center;
 }
-.add{
+
+.add {
     display: flex;
-    height:20vh ;
+    height: 20vh;
     align-items: end;
     justify-content: center;
 }
-.select{
+
+.select {
     height: 5vh;
     direction: rtl;
     width: 98%;
     align-self: center;
 }
-.delete{
+
+.delete {
     color: white;
     background-color: red;
     width: 10vw;
@@ -80,12 +86,53 @@
     font-weight: bold;
     cursor: pointer;
 }
-.deleted{
+
+.components {
     position: absolute;
     position: fixed;
     background-color: antiquewhite;
     height: 40vh;
-    width:40vw ;
+    width: 40vw;
     top: 35%;
     left: 35%;
+}
+
+.loginPage {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 50vh;
+    justify-content: center;
+    justify-self: center;
+    border-radius: 25px;
+    margin-top: 25%;
+}
+
+.login {
+    display: flex;
+    width: 10rem;
+    font-weight: bold;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    margin-top: 40px;
+    background-color: rgba(119, 255, 0, 0.674);
+}
+
+.ilogin {
+    display: flex;
+    width: 85%;
+    justify-self: center;
+    background-color: beige;
+    border: none;
+    outline: none;
+}
+
+.divinput {
+    border-bottom: 1px solid black;
+    width: 85%;
+    display: flex;
+    justify-self: center;
 }
